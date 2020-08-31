@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,900;1,700;1,900&family=Roboto+Slab:wght@300;400;600;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <title>main Section home</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        p,
+        button {
+            font-family: 'Roboto Slab', serif;
+        }
+
+        p,
+        h1,
+        a,
+        .reviews i,
+        span,
+        button {
+            color: #a78627;
+        }
+
+        p {
+            font-size: 11px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #03071E;
+        }
+
+        header {
+            z-index: 1;
+            position: relative;
+            padding: 20px 0 10px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        header>i {
+            display: none !important;
+            color: #03071E;
+            font-size: 16px;
+        }
+
+        header>img {
+            width: 220px;
+            margin-bottom: 2px;
+
+        }
+
+        nav {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: white;
+            border-bottom: 1px solid #03071E;
+            z-index: 3;
+        }
+
+        nav>ul {
+            width: 70%;
+            border-top: none;
+            border-bottom: none;
+        }
+
+        nav>ul:first-child {
+            width: 40%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+        nav>ul:last-child {
+            width: 20%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+        #main-image {
+            width: 100%;
+        }
+
+        #about-us {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 35px 20px 30px 10px;
+            background-color: #f7f8fc;
+        }
+
+        #about-us>img {
+            width: 450px;
+            height: 50vh;
+            padding-right: 20px;
+        }
+
+        #about-paragraph {
+            width: 45vw;
+            padding-left: 5vw;
+        }
+
+        #about-paragraph>h1 {
+            margin-bottom: 20px;
+            text-decoration: underline;
+        }
+
+        #about-paragraph>p {
+            padding-left: 10px;
+            line-height: 17px;
+            font-size: 12px;
+        }
+
+
+        /* Categories section */
+        #categories {
+            display: flex;
+            justify-content: center;
+            padding: 50px 0;
+        }
+
+        .category-portions {
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .category-portions>h1 {
+            color: #a78627;
+            ;
+
+        }
+
+        .category-portions:first-child {
+            margin-right: 70px;
+        }
+
+        .slider-container {
+            overflow: hidden;
+            width: 280px;
+            margin-top: 30px;
+        }
+
+        #images-slider>img {
+            width: 260px;
+            height: 260px;
+            float: left;
+            margin: 10px;
+            border: 3px solid #a78627;
+        }
+
+        .category-portions:last-child #images-slider>img {
+
+            border: 3px solid #03071E;
+        }
+
+        .category-portions:last-child h1 {
+
+            color: #03071E;
+        }
+
+        #images-slider {
+            width: 1930px;
+            overflow-x: hidden;
+            animation: main-slider 30s linear infinite 5s;
+            position: relative;
+            left: 0;
+        }
+
+        @keyframes main-slider {
+            0% {
+                left: 0;
+            }
+
+            2% {
+                left: -280px;
+            }
+
+            23% {
+                left: -280px;
+            }
+
+            25% {
+                left: -560px;
+            }
+
+            40% {
+                left: -560px;
+            }
+
+            45% {
+                left: -840px;
+            }
+
+            60% {
+                left: -840px;
+            }
+
+            65% {
+                left: -1120px;
+            }
+
+            80% {
+                left: -1120px;
+            }
+
+            85% {
+                left: -1400px;
+            }
+
+            100% {
+                left: -1400px;
+            }
+
+        }
+
+        hr {
+            color: #a78627;
+            margin: 0 10vw;
+        }
+
+        #collections {
+            margin: 80px 0;
+        }
+
+        #collections>div {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 45vh);
+            grid-gap: 2px;
+        }
+
+        #collections>div>div {
+            position: relative;
+            border: 3px solid #a78627;
+            overflow: hidden;
+        }
+
+        #collections img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #collection-paragraph {
+
+            grid-column: 2/4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: none !important;
+        }
+
+        #collection-paragraph h1 {
+            text-decoration: underline;
+        }
+
+        #collection-paragraph>p {
+            width: 80%;
+            padding: 2vw 0;
+            text-align: center;
+        }
+
+        .grid-child-heading {
+            position: absolute;
+            color: #a78627;
+            bottom: 10px;
+            left: 10%;
+            font-size: 20px;
+            font-style: italic;
+            z-index: 2;
+        }
+
+        #collections>div>div:hover .black-opacity-div {
+            opacity: 0.8;
+        }
+
+        #collections>div>div:hover img {
+            transform: scale(1.4);
+        }
+
+        .black-opacity-div {
+            width: 100%;
+            height: 100%;
+            background-color: #03071E;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            opacity: 0;
+        }
+
+        #testimonials {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+            padding: 80px 0;
+            background-color: #f7f8fc;
+        }
+
+        #testimonials>h1 {
+            font-size: 20px;
+            margin-bottom: 70px;
+        }
+
+        #testimonial-slider {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        #slider-container {
+            position: relative;
+            left: 0;
+            animation: reviews-slider 20s linear infinite;
+
+        }
+
+        @keyframes reviews-slider {
+
+            0% {
+                left: 0;
+            }
+
+            20% {
+                left: 0;
+            }
+
+            25% {
+                left: -100vw;
+            }
+
+            45% {
+                left: -100vw;
+            }
+
+            50% {
+                left: -200vw;
+            }
+
+            70% {
+                left: -200vw;
+            }
+
+            75% {
+                left: -300vw;
+            }
+
+            100% {
+                left: -300vw;
+            }
+
+        }
+
+        .reviews {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            float: left;
+            background-color: #03071E;
+            border-right: 1px solid #f7f8fc;
+            padding: 20px 0;
+        }
+
+        .reviews i,
+        span,
+        p {
+            font-style: italic;
+            color: #a78627 !important;
+        }
+
+        .reviews i {
+            margin-bottom: 25px;
+        }
+
+        .reviews p {
+            color: #03071E;
+            margin: 10px 0;
+            width: 55%;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        #contact-home {
+            background: url("images/sliderhome/bg-image-contact.jpg") no-repeat;
+            background-size: 100% 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding-right: 50px;
+        }
+
+        #contact-home>div>button {
+            padding: 10px 20px;
+            margin: 30px 0;
+            background-color: #a78627;
+            color: #03071E;
+            border: none;
+            outline: none;
+        }
+
+        #contact-home>div>h1 {
+            color: gray;
+            font-style: italic;
+            font-size: 20px;
+        }
+
+        #contact-home>div {
+            margin-top: 80px;
+        }
+
+        #contact-home>div>div>input {
+            padding: 3px 10px;
+            width: 200px;
+            background-color: #f7f8fc;
+            border: 2px solid gray;
+            outline: none;
+            color: #03071E;
+            background: transparent;
+        }
+
+        input::placeholder {
+            font-style: italic;
+        }
+
+        #contact-home>div>div {
+            margin: 80px 0;
+        }
+
+        #contact-home>div>div>button {
+            padding: 3px 20px;
+            background-color: #a78627;
+            color: #03071E;
+            border: none;
+            outline: none;
+        }
+
+
+
+        @media only screen and (max-width: 992px) {
+            header {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 0 20px;
+                background-color: white;
+                border-bottom: 1px solid #03071E;
+                position: sticky;
+                top: 0;
+                Z-index: 3;
+            }
+
+            nav {
+                display: none;
+            }
+
+            header>i {
+                display: inline-block !important;
+            }
+
+            #about-us {
+                flex-direction: column-reverse;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            #about-us>img {
+                width: 90vw;
+                padding-right: 0;
+            }
+
+            #about-paragraph {
+                width: 90vw;
+                padding-left: 2vw;
+                padding-right: 10vw;
+                margin: 50px 0;
+            }
+
+        }
+
+        @media only screen and (max-width: 768px) {
+
+            .category-portions:first-child {
+                margin-right: 5vw;
+            }
+
+            #collections {
+                margin: 0;
+            }
+
+            #collections>div {
+                justify-content: center;
+                align-content: center;
+                grid-template-columns: 60vw;
+                grid-template-rows: 14%, repeat(6, 10%);
+            }
+
+            #collection-paragraph {
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+
+        }
+
+        @media only screen and (max-width: 600px) {
+            header>img {
+                width: 200px;
+            }
+
+            header>i {
+                font-size: 18px;
+            }
+
+            #categories {
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .category-portions:first-child {
+                margin-right: 0px;
+            }
+
+            #contact-home {
+
+                flex-direction: column;
+                align-items: flex-end;
+                padding: 0 20px;
+            }
+
+            #collections>div {
+                grid-template-rows: 14%, repeat(6, 12%);
+            }
+
+        }
+/* This is footer style  */
+        footer {
+            background-color: #111433;
+        }
+
+        #foot-heading {
+            color: #a78627;
+            margin-left: 60px;
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+        }
+
+        #icon-anchor1,
+        #icon-anchor2,
+        #icon-anchor3 {
+            color: #a78627;
+            margin-left: 62px;
+            margin-top: 40px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        #icon-anchor1:hover,
+        #icon-anchor2:hover,
+        #icon-anchor3:hover {
+            color: white;
+        }
+
+        .icon-anchor4 {
+            color: #a78627;
+            margin-left: 62px;
+            font-size: 30px;
+            background-color: transparent;
+            outline: none;
+            border: none;
+        }
+
+        .icon-anchor4:hover {
+            color: white;
+            cursor: pointer;
+        }
+
+        .foot-detail {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .foot-detail1 {
+            display: flex;
+            flex-direction: column;
+            margin-left: 57px;
+
+        }
+
+        .foot-detail1 h1 {
+            color: #a78627;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+        }
+
+        .foot-detail1 a {
+            color: #a78627;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            margin-top: 10px;
+            text-decoration: none;
+        }
+
+        .foot-detail1 a:hover {
+            color: white;
+        }
+
+        .foot-para {
+            border-top-style: solid;
+            text-align: center;
+            color: #a78627;
+            margin: 30px 0px 0px 0px;
+        }
+
+        @media screen and (max-width: 480px) {
+            footer {
+                background-color: #111433;
+            }
+
+            .foot-detail {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .icon-anchor4 {
+                margin-left: 55px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="images/nlogo1.jpg" />
+        <i class="fas fa-bars"></i>
+
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Kids</a></li>
+            <li><a href="#">About us</a></li>
+        </ul>
+        <ul>
+            <li><a href="#"><i class="far fa-user"></i></a></li>
+            <li><a href="#"><i class="fas fa-shopping-bag"></i></a></li>
+            <li><a href="#"><i class="far fa-star"></i></a></li>
+            <li><a href="#"><i class="fas fa-search"></i></a></li>
+        </ul>
+    </nav>
+    <main>
+        <img id="main-image" src="images/sliderhome/bg-image3.jpg" alt="image1 slider">
+        <section id="about-us">
+            <img src="images/sliderhome/bg-image2.jpg" alt="image2 slider">
+            <div id="about-paragraph">
+                <h1>About us</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy
+                    text ever since the 1500s, when an unknown printer took
+                    a galley of type and scrambled it to make a type specimen book.
+                    It has survived not only five centuries, but also the leap into
+                    electronic typesetting, remaining essentially unchanged.
+                    It was popularised in the 1960s with the release of Letraset
+                    sheets containing Lorem Ipsum passages, and more recently with
+                    desktop publishing software like Aldus PageMaker including versions
+                    of Lorem Ipsum.</p>
+            </div>
+        </section>
+        <section id="categories">
+            <div class="category-portions">
+                <h1>Women</h1>
+                <div class="slider-container">
+                    <div id="images-slider">
+                        <img src="images/women/bangles.jpg" alt="image1 slider">
+                        <img src="images/women/rings2.JPG" alt="image2 slider">
+                        <img src="images/women/earings4.jpg" alt="image3 slider">
+                        <img src="images/women/braclet4.jpg" alt="image4 slider">
+                        <img src="images/women/pendant5.JPG" alt="image6 slider">
+                        <img src="images/women/bangles.jpg" alt="image1 slider">
+                    </div>
+                </div>
+            </div>
+            <!-- Men jewellery category -->
+            <div class="category-portions">
+                <h1>Men</h1>
+                <div class="slider-container">
+                    <div id="images-slider">
+                        <img src="images/men/kadas.jpg" alt="image1 slider">
+                        <img src="images/men/chain2.JPG" alt="image2 slider">
+                        <img src="images/men/earing.JPG" alt="image3 slider">
+                        <img src="images/men/rings.jpg" alt="image4 slider">
+                        <img src="images/men/cufflinks.jpg" alt="image6 slider">
+                        <img src="images/men/kadas.jpg" alt="image1 slider">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section id="collections">
+
+            <div>
+                <div>
+                    <h2 class="grid-child-heading">Bangles</h2>
+                    <img src="images/women/bangles2.jpg" alt="collection1">
+                    <div class="black-opacity-div">
+                        <!-- black div with light opacity -->
+                    </div>
+                </div>
+                <div id="collection-paragraph">
+                    <h1>Collections</h1>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy
+                        text ever since the 1500s, when an unknown printer took
+                        a galley of type and scrambled it to make a type specimen book.
+                        It has survived not only five centuries, but also the leap into
+                        electronic typesetting, remaining essentially unchanged.
+                    </p>
+                </div>
+                <div>
+                    <h2 class="grid-child-heading">Earings</h2>
+                    <img src="images/women/earing.png" alt="collection1">
+                    <div class="black-opacity-div">
+                        <!-- black div with light opacity -->
+                    </div>
+                </div>
+                <div>
+                    <h2 class="grid-child-heading">Braclets</h2>
+                    <img src="images/women/braclet.jpg" alt="collection1">
+                    <div class="black-opacity-div">
+                        <!-- black div with light opacity -->
+                    </div>
+                </div>
+                <div>
+                    <h2 class="grid-child-heading">Rings</h2>
+                    <img src="images/women/rings4.JPG" alt="collection1">
+                    <div class="black-opacity-div">
+                        <!-- black div with light opacity -->
+                    </div>
+                </div>
+                <div>
+                    <h2 class="grid-child-heading">Nosepins</h2>
+                    <img src="images/women/nosepin2.JPG" alt="collection1">
+                    <div class="black-opacity-div">
+                        <!-- black div with light opacity -->
+                    </div>
+                </div>
+                <div>
+                    <h2 class="grid-child-heading">Necklaces</h2>
+                    <img src="images/women/pendant.jpg" alt="collection1">
+                    <div class="black-opacity-div">
+                        <!-- black div with light opacity -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="testimonials">
+            <h1>Why Customers Trust Jewelicious</h1>
+            <div id="testimonial-slider">
+                <div id="slider-container">
+                    <!-- reviews will generate with js -->
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-home">
+            <div>
+                <h1>How may we assist you?</h1>
+                <button>Get in touch</button>
+                <div>
+                    <input type="email" placeholder="Enter your email address">
+                    <button>Subscribe newsletter</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- This is footer section  -->
+    <footer>
+        <div id="foot-background">
+            <section>
+
+                <div class="map">
+                    <iframe src="https://maps.google.com/maps?q=karachi&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                        width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen=""
+                        aria-hidden="false" tabindex="0"></iframe>
+                    <a href="https://www.crocothemes.net"></a>
+
+                </div>
+
+            </section>
+
+            <section class="foot-detail">
+
+                <div class="foot-item">
+                    <h1 id="foot-heading">Find us</h1>
+
+                    <h6 id="icon-anchor">
+                        <a id="icon-anchor1" href="#"><i class="fas fa-globe-europe"></i> 1234 Street Name City, AA
+                            9999</a>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <a id="icon-anchor2" href="#"><i class="fas fa-bell"></i> +1 (0) 000 0000 001</a>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <a id="icon-anchor3" href="#"><i class="far fa-envelope"></i> jewelicious@gmail.com</a>
+                        <br>
+                        <br>
+                        <br>
+                        <a href="#" class="icon-anchor4"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="icon-anchor4"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="icon-anchor4"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="icon-anchor4"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="icon-anchor4"><i class="fab fa-google-plus-g"></i></a>
+                    </h6>
+                </div>
+                <div class="foot-detail1">
+                    <h1>Explore Jewelicious</h1>
+                    <a href="">Home</a>
+                    <a href="">Cart</a>
+                    <a href="">Whishlist</a>
+                    <a href="">Shops</a>
+                    <a href="">Men</a>
+                    <a href="">Woman</a>
+                    <a href="">Kids</a>
+
+
+                </div>
+                <div class="foot-detail1">
+                    <h1>Policy Matters</h1>
+                    <a href="">Terms And conditions</a>
+                    <a href="">Privacy Policy</a>
+                    <a href="">Exchange Policy</a>
+                    <a href="">Shipping Details</a>
+                    <a href=""> Payment Methods</a>
+                </div>
+                <div class="foot-detail1">
+                    <h1>About Us</h1>
+                    <a href="">FAQ(frequently Asked Questions).</a>
+                    <a href="">Why Us?</a>
+                    <a href="">Contact us</a>
+                </div>
+            </section>
+        </div>
+        <p class="foot-para"> © 2020 Jewelicious All rights reserved</p>
+
+    </footer>
+</body>
+
+<script src="homeScript.js"></script>
+</body>
+
+</html>

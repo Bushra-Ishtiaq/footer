@@ -1,0 +1,28 @@
+
+[
+    {
+        "id":1,
+        "name":"Sana",
+        "review":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text",
+        "wishlist":["earing","rings"],
+        "email":"sana@gmail.com",
+        "password":"sana"
+    },
+    {
+        "id":2,
+        "name":"Ahmed",
+        "review":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text",
+        "wishlist":["braclet","necklace"],
+        "email":"ahmed@gmail.com",
+        "password":"ahmed"
+    },
+    {
+        "id":3,
+        "name":"Farah",
+        "review":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text",
+        "wishlist":["earing","rings"],
+        "email":"farah@gmail.com",
+        "password":"farah"
+    }
+
+]
